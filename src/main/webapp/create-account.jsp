@@ -11,9 +11,10 @@
     
     <div class="container">
         <h2 class="text-center mt-">Login</h2>
-        <form action="/createCustomer" method="post">
+        <form action="/createCustomer?user-id=${user.uuid}" method="post">
             <input type="text" name="token" value="${token}">
             <div class="form-group">
+              <input type="hidden" name="uuid" value="${user.uuid}">
               <label for="exampleInputEmail1">first Name</label>
               <input type="text" value="${user.first_name}" name="first_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User Name">
               <small id="emailHelp" class="form-text text-muted">We'll never share your cradential with anyone else.</small>
